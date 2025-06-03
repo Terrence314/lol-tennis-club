@@ -1,0 +1,10 @@
+Component,Recommended Solution,Why This Choice
+Frontend Framework,Vue.js 3 + Vite,"Easy to learn, great i18n support, reactive"
+UI Library,Element Plus / Vuetify,"Beautiful components, good Chinese support"
+Authentication,Supabase Auth (start simple),"Free tier, easy setup, can upgrade later"
+Database,Supabase PostgreSQL,"Real-time updates, generous free tier"
+Maps Integration,Google Maps JavaScript API,Best coverage for Hong Kong locations
+Internationalization,Vue I18n,"Excellent Vue integration, lazy loading"
+Hosting,Netlify,"Easy deployment, generous free tier"
+Domain & SSL,Free custom domain + SSL,"Automatic HTTPS, global CDN"
+Telegram Integration,Telegram Web App API,Direct integration with Telegram groups

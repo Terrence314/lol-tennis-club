@@ -1,0 +1,6 @@
+Solution,Setup Difficulty,Real-time Updates,Cost Free Tier,Scalability,Query Flexibility,Perfect For
+Supabase,Easy,Yes,500MB DB,High,High,Production apps
+Firebase Firestore,Easy,Yes,1GB storage,High,Medium,Google ecosystem
+Airtable,Very Easy,Limited,1200 records/base,Medium,Low,Simple data
+Google Sheets API,Easy,No,100 requests/day,Low,Low,Prototyping
+Local Storage + JSON,Very Easy,No,Free,Very Low,Low,MVP testing

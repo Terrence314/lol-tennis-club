@@ -1,0 +1,6 @@
+Solution,Setup Difficulty,Serverless Functions,Custom Domain,Build Minutes Free,Best Framework,Perfect For
+Vercel,Easy,Yes,Free,6000/month,Next.js,Full-stack apps
+Netlify,Easy,Yes,Free,300/month,Static sites,JAMstack
+GitHub Pages,Very Easy,No,Free,Unlimited,Jekyll,Simple sites
+Surge.sh,Very Easy,No,Free,Unlimited,Static sites,Quick deploy
+Firebase Hosting,Easy,Limited,Free,10/day,Any,Google ecosystem

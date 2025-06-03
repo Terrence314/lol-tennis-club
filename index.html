@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoL Tennis Chill Club</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__brand">
+                    <span class="header__icon">🎾</span>
+                    <div>
+                        <h1 class="header__title" data-translate="title">LoL Tennis Chill Club</h1>
+                        <p class="header__subtitle" data-translate="subtitle">Tennis Court Booking Portal</p>
+                    </div>
+                </div>
+                <div class="header__actions">
+                    <select class="language-switcher form-control" id="languageSwitcher">
+                        <option value="en">English</option>
+                        <option value="zh">中文</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Dashboard Section -->
+            <section class="dashboard">
+                <div class="welcome-card card">
+                    <div class="card__body">
+                        <h2 data-translate="welcome">Welcome to our tennis community! Share court bookings and find playing partners.</h2>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-card__number" id="activeBookingsCount">4</div>
+                                <div class="stat-card__label" data-translate="activeBookings">Active Bookings</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-card__number" id="availableSpotsCount">6</div>
+                                <div class="stat-card__label" data-translate="availableSpots">Available Spots</div>
+                            </div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn btn--primary" id="createBookingBtn" data-translate="createBooking">Create Booking</button>
+                            <button class="btn btn--secondary" id="browseBookingsBtn" data-translate="browseBookings">Browse Bookings</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Filters Section -->
+            <section class="filters">
+                <div class="filters__content">
+                    <div class="form-group">
+                        <label class="form-label" data-translate="filterByStyle">Filter by Style</label>
+                        <select class="form-control" id="styleFilter">
+                            <option value="" data-translate="allStyles">All Styles</option>
+                            <option value="搓波">搓波 (Rally Play)</option>
+                            <option value="開SET">開SET (Set Match)</option>
+                            <option value="其他">其他 (Other)</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bookings List -->
+            <section class="bookings">
+                <div class="bookings-grid" id="bookingsList">
+                    <!-- Bookings will be dynamically generated here -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Create Booking Modal -->
+    <div class="modal" id="createBookingModal">
+        <div class="modal__backdrop" id="createModalBackdrop"></div>
+        <div class="modal__content">
+            <div class="modal__header">
+                <h3 data-translate="createNewBooking">Create New Booking</h3>
+                <button class="modal__close" id="createModalClose">&times;</button>
+            </div>
+            <div class="modal__body">
+                <form id="createBookingForm">
+                    <div class="form-group">
+                        <label class="form-label" data-translate="courtName">Court Name</label>
+                        <input type="text" class="form-control" id="courtName" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-translate="address">Address</label>
+                        <input type="text" class="form-control" id="address" placeholder="Hong Kong locations only" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-translate="date">Date</label>
+                        <input type="date" class="form-control" id="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-translate="time">Time</label>
+                        <input type="time" class="form-control" id="time" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-translate="playStyle">Play Style</label>
+                        <select class="form-control" id="playStyle" required>
+                            <option value="搓波">搓波 (Rally Play)</option>
+                            <option value="開SET">開SET (Set Match)</option>
+                            <option value="其他">其他 (Other)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-translate="maxPlayers">Max Players</label>
+                        <input type="number" class="form-control" id="maxPlayers" min="2" max="8" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Creator Name</label>
+                        <input type="text" class="form-control" id="creatorName" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-translate="notes">Notes</label>
+                        <textarea class="form-control" id="notes" rows="3"></textarea>
+                    </div>
+                    <div class="modal__actions">
+                        <button type="button" class="btn btn--secondary" id="cancelCreate" data-translate="cancel">Cancel</button>
+                        <button type="submit" class="btn btn--primary" data-translate="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Join Booking Modal -->
+    <div class="modal" id="joinBookingModal">
+        <div class="modal__backdrop" id="joinModalBackdrop"></div>
+        <div class="modal__content">
+            <div class="modal__header">
+                <h3 data-translate="joinBooking">Join Booking</h3>
+                <button class="modal__close" id="joinModalClose">&times;</button>
+            </div>
+            <div class="modal__body">
+                <div id="joinBookingDetails"></div>
+                <form id="joinBookingForm">
+                    <div class="form-group">
+                        <label class="form-label" data-translate="enterName">Enter your name</label>
+                        <input type="text" class="form-control" id="playerName" required>
+                    </div>
+                    <div class="modal__actions">
+                        <button type="button" class="btn btn--secondary" id="cancelJoin" data-translate="cancel">Cancel</button>
+                        <button type="submit" class="btn btn--primary" data-translate="confirm">Confirm</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

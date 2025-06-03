@@ -1,0 +1,6 @@
+Solution,Setup Difficulty,User Management,Cost Free Tier,Social Login,Maintenance Required,Perfect For
+Firebase Auth,Easy,Full,10K MAU/month,Yes,Low,Full-featured app
+Supabase Auth,Easy,Full,50K MAU/month,Limited,Low,Open source lovers
+SimpleLogin,Medium,Basic,7K MAU/month,Yes,Medium,Privacy focused
+Telegram Web App,Very Easy,Basic,Unlimited,Telegram Only,Very Low,Telegram groups
+No-Auth (Name Only),Very Easy,None,Free,No,None,Simple start

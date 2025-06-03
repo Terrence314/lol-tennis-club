@@ -1,0 +1,7 @@
+Component,Simple Solution,Pros
+Frontend,Pure HTML/CSS/JavaScript,"No build process, immediate deployment"
+Authentication,Just name input (no login),"Zero maintenance, instant access"
+Database,Google Sheets API,"Familiar interface, easy to manage"
+Hosting,GitHub Pages,"Free, automatic deployment"
+Maps,Google Maps embed,"Simple integration, no API limits"
+Languages,Simple language switcher,Quick implementation

@@ -1,0 +1,11 @@
+Feature,Priority,Implementation Notes
+Court Listing,Critical,List all shared court bookings
+Booking Creation,Critical,Allow users to create new bookings
+Join Booking,Critical,Simple name-based joining system
+Play Style Filter,High,Filter by 搓波/開SET/其他
+Location with Maps,High,Address + Google Maps link
+Language Support,High,Chinese (Traditional) + English
+Search/Filter,Medium,"Filter by date, location, play style"
+Telegram Integration,Medium,Optional: sync with Telegram group
+Mobile Responsive,Critical,Mobile-first design essential
+Real-time Updates,Nice to have,Auto-refresh or manual refresh
